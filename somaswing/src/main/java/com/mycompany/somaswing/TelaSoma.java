@@ -6,7 +6,7 @@ package com.mycompany.somaswing;
 
 /**
  *
- * @author Gabriel
+ * @author Mariana Cazzoto
  */
 public class TelaSoma extends javax.swing.JFrame {
 
