@@ -26,6 +26,7 @@ public class TelaValores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
         txtNum = new javax.swing.JTextField();
         txtDen = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -35,6 +36,12 @@ public class TelaValores extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         lblDiv = new javax.swing.JLabel();
         lblResto = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lblRaizNum = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        lblRaizDen = new javax.swing.JLabel();
+
+        jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,7 +55,7 @@ public class TelaValores extends javax.swing.JFrame {
 
         jLabel2.setText("Denominador");
 
-        btnDividir.setText("Dividir");
+        btnDividir.setText("Calcular");
         btnDividir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDividirActionPerformed(evt);
@@ -63,6 +70,14 @@ public class TelaValores extends javax.swing.JFrame {
 
         lblResto.setText("0");
 
+        jLabel5.setText("RaizNum");
+
+        lblRaizNum.setText("0");
+
+        jLabel6.setText("RaizDen");
+
+        lblRaizDen.setText("0");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,6 +89,14 @@ public class TelaValores extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblDiv)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblRaizDen))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblRaizNum))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel4)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -90,7 +113,7 @@ public class TelaValores extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(83, 83, 83)
                         .addComponent(btnDividir)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,15 +128,23 @@ public class TelaValores extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(btnDividir)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(lblDiv))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(lblResto))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lblRaizNum))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(lblRaizDen))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,9 +156,13 @@ public class TelaValores extends javax.swing.JFrame {
         int den = Integer.parseInt(txtDen.getText());
         float d = num / den;
         float r = num % den;
-    
+        float rn = (float) Math.sqrt(num);
+        float rd = (float) Math.sqrt(den);
+        
         lblDiv.setText(Float.toString(d)); 
         lblResto.setText(Float.toString(r));
+        lblRaizNum.setText(Float.toString(rn));
+        lblRaizDen.setText(Float.toString(rd));
     }//GEN-LAST:event_btnDividirActionPerformed
 
     private void txtNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumActionPerformed
@@ -175,7 +210,12 @@ public class TelaValores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel lblDiv;
+    private javax.swing.JLabel lblRaizDen;
+    private javax.swing.JLabel lblRaizNum;
     private javax.swing.JLabel lblResto;
     private javax.swing.JTextField txtDen;
     private javax.swing.JTextField txtNum;
